@@ -13,7 +13,7 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
   final UserBloc _userBloc = UserBloc();
   final UserModel userModel = UserModel();
-  String? selectedValue = "ACEH";
+  String? selectedValue = "Leanne Graham";
 
   @override
   void initState() {
