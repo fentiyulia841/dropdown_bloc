@@ -68,14 +68,14 @@ class _UserPageState extends State<UserPage> {
 
   Widget _buildCard(BuildContext context, DataUser dataModel) {
     List<DropdownMenuItem<String>> menuItems = [];
-    // for (var i = 0; i < userModel.values!.length; i++) {
-    //   menuItems.add(
-    //     DropdownMenuItem(
-    //       child: Text("${userModel.values![i].name}"),
-    //       value: "${userModel.values![i].name}",
-    //     ),
-    //   );
-    // }
+    for (var i = 0; i < dataModel.users!.length; i++) {
+      menuItems.add(
+        DropdownMenuItem(
+          child: Text("${dataModel.users![i].name}"),
+          value: "${dataModel.users![i].name}",
+        ),
+      );
+    }
 
     return DropdownButton(
       value: selectedValue,
