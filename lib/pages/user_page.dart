@@ -53,7 +53,6 @@ class _UserPageState extends State<UserPage> {
               } else if (state is UserLoading) {
                 return _buildLoading();
               } else if (state is UserLoaded) {
-                print(state.dataModel);
                 return _buildCard(context, state.dataModel);
               } else if (state is UserError) {
                 return Container();
@@ -77,7 +76,6 @@ class _UserPageState extends State<UserPage> {
     //     ),
     //   );
     // }
-    
 
     return DropdownButton(
       value: selectedValue,

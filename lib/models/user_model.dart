@@ -1,5 +1,4 @@
 class DataUser {
-
   String? error;
   List<UserModel>? users;
 
@@ -11,7 +10,7 @@ class DataUser {
     this.users;
   }
 
-  DataUser.fromJson(Map<String, dynamic> json) {
+  DataUser.fromJson(List<dynamic> json) {
     if (json != null) {
       users = [];
       json.forEach((v) {
@@ -20,8 +19,8 @@ class DataUser {
     }
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+  List<dynamic> toJson() {
+    List<dynamic> data = [];
 
     if (this.users != null) {
       data = this.users!.map((v) => v.toJson()).toList();

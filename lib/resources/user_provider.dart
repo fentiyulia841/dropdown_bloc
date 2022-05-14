@@ -10,7 +10,6 @@ class UserProvider {
     try {
       Response response = await _dio.get(url);
       return DataUser.fromJson(response.data);
-      
     } catch (error, stacktrace) {
       print("Exception occured: $error stackTrace: $stacktrace");
       return DataUser.withError("Data not found / Connection issue");
