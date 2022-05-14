@@ -12,7 +12,7 @@ class UserPage extends StatefulWidget {
 
 class _UserPageState extends State<UserPage> {
   final UserBloc _userBloc = UserBloc();
-  final UserModel userModel = UserModel();
+  final DataUser dataModel = DataUser();
   String? selectedValue = "Leanne Graham";
 
   @override
@@ -53,8 +53,8 @@ class _UserPageState extends State<UserPage> {
               } else if (state is UserLoading) {
                 return _buildLoading();
               } else if (state is UserLoaded) {
-                print(state.userModel);
-                return _buildCard(context, state.userModel);
+                print(state.dataModel);
+                return _buildCard(context, state.dataModel);
               } else if (state is UserError) {
                 return Container();
               } else {
@@ -67,7 +67,7 @@ class _UserPageState extends State<UserPage> {
     );
   }
 
-  Widget _buildCard(BuildContext context, UserModel userModel) {
+  Widget _buildCard(BuildContext context, DataUser dataModel) {
     List<DropdownMenuItem<String>> menuItems = [];
     // for (var i = 0; i < userModel.values!.length; i++) {
     //   menuItems.add(

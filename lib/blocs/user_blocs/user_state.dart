@@ -16,8 +16,8 @@ class UserInitial extends UserState {}
 class UserLoading extends UserState {}
 
 class UserLoaded extends UserState {
-  final UserModel userModel;
-  const UserLoaded(this.userModel);
+  final DataUser dataModel;
+  const UserLoaded(this.dataModel);
 }
 
 class UserError extends UserState {

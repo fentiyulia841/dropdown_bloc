@@ -5,7 +5,7 @@ class UserRepository {
   final _provider = UserProvider();
 
   
-  Future<UserModel> fetchUserList() {
+  Future<DataUser> fetchUserList() {
     return _provider.fetchUserList();
   }
 }
